@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# Instalacja interpretera bash
+# Code is written in bash, so we need to install it
 RUN apk update && apk add bash
 
 COPY main.sh /app/main.sh
