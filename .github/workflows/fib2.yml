@@ -46,9 +46,9 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
           labels: |
             app=fibonacci
-            author=${AUTHOR_NAME}
-            group=${GROUP_NUMBER}
+            author=${{ secrets.AUTHOR_NAME }}
+            group=${{ secrets.GROUP_NUMBER }}
           cache-from: |
-            type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/python-fibonacci:cache
+            type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simple_fibonacci:cache
           cache-to: |
-            type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/python-fibonacci:cache
+            type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/simple_fibonacci:cache
