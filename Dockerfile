@@ -1,12 +1,13 @@
-FROM alpine:latest
+FROM alpine
 
-# Code is written in bash, so we need to install it
-RUN apk update && apk add bash
+# RUN apk add --no-cache busybox
+
+RUN mkdir /app
 
 COPY main.sh /app/main.sh
 
 WORKDIR /app
 
-RUN chmod u+x main.sh
+RUN chmod +x /app/main.sh
 
-CMD [ "./main.sh" ]
+CMD ["./main.sh"]
