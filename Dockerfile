@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM busybox:1.34.1-musl
 
 # RUN apk add --no-cache busybox
 
